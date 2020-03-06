@@ -1,0 +1,22 @@
+<div class="pl-3">
+  <!-- <h1>{{title}}</h1> -->
+  <div>
+    <p>appNumber = {{appNumber}}</p>
+
+    <!-- For Pass By Value -->
+    <!-- <app-child [childNumber]="appNumber" [parentName]="myName"></app-child> -->
+
+    <!-- For Pass By Referrence -->
+    <app-child *ngIf="childVisibilty" [childNumber]="appNumber" [parentName]="user"></app-child>
+
+    <h3 *ngIf="!childVisibilty" class="text-danger">Child Component Destroyed !</h3>
+
+    <button class="btn btn-info mr-2" (click)="increment()">Increment</button>
+    <button class="btn btn-warning mr-2" (click)="decrement()">Decrement</button>
+
+    <button class="btn btn-success mt-1" (click)="updateName()">Update Name</button>
+    <br />
+
+    <button class="btn btn-danger mt-1" (click)="updateVisibilty()">{{childShowHide}}</button>
+  </div>
+</div>

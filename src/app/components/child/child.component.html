@@ -1,0 +1,16 @@
+<div class="row m-0">
+  <div class="col p-0">
+    <hr class="m-0">
+    <p *ngIf="parentName">parent name = {{parentName}}</p>
+    <p *ngIf="parentName?.myName">parent name = {{parentName.myName}}</p>
+    <p class="mb-0" *ngIf="childNumber">childNumber = {{childNumber}}</p>
+    <hr class="mt-0">
+  </div>
+  <div class="col-4 p-0">
+    <hr class="m-0">
+    <h6>
+      <--Child Component Section </h6>
+
+        <app-grand-child></app-grand-child>
+  </div>
+</div>
